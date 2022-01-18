@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+const configServerUrl =  String.fromEnvironment('CONFIG_SERVER_URL', defaultValue: "");
+
+
 void main() {
   runApp(const MyApp());
 }
@@ -70,11 +73,6 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
@@ -95,6 +93,12 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            SizedBox(
+              child: CircularProgressIndicator(),
+              height: 200.0,
+              width: 200.0,
+            ),
+            Text(configServerUrl),
             const Text(
               'You have pushed the button this many times:',
             ),
