@@ -2,6 +2,8 @@
 
 > This project is still under active development and not even close to an alpha release.
 
+> Discarded the project for now. Maybe I will pick that up later again.
+
 ## About
 
 A small, dynamic generated interface for simply controlling Shelly RGBW bulbs inside your local network.
